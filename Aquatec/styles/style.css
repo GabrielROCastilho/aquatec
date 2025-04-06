@@ -13,6 +13,8 @@ body{
     --tamanho-footer: 90px;
     /* Variável que calcula a altura do banner. Definimos que a altura do banner vai ser 100vh menos a altura do header e menos a altura do footer, para que o banner não ocupe 100% do espaço total */
     --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+    --tamanho-footer-login: 40px;
+    --tamanho-login: calc(100vh - var(--tamanho-header) - var(--tamanho-footer-login));
 }
 
                                             /* HEADER */
@@ -123,3 +125,87 @@ body{
 .footer .container{
     justify-content: center;
 }
+
+                                            /* LOGIN */
+.login{
+    background-image: url(../assets/imgs/bg-jelly-fish-para-home.png);
+    background-size: cover;
+    height: var(--tamanho-login);
+    border-bottom: var(--tamanho-footer-login) solid #32b9cd;
+}
+
+.login .container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100%;
+}
+
+.login .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 40%;
+    color: white;
+    background-color: rgb(201, 196, 196);
+    border-radius: 15px;
+    padding: 10px;
+    height: fit-content;
+}
+
+.formulario{
+    width: 80%;
+}
+
+.login .formulario{
+    display: flex;
+    flex-direction: column;
+}
+
+.login span{
+    color: rgb(255, 62, 117);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.login h2{
+    color: rgb(255, 62, 117);
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 35px;
+    align-self: center;
+}
+
+.login button{
+    border-radius: 5px;
+    background-color: rgb(255, 24, 89);
+    color: white;
+    border: none;
+    width: 150px;
+    height: 35px;
+    margin: 20px 0px;
+    align-self: center;
+} 
+
+.login input{
+    border-color: #32b9cd;
+    border-radius: 5px;
+    height: 30px;
+}
+
+.login .campo{
+    display: flex;
+    flex-direction: column;
+}
+
+input::placeholder {
+    text-align: center;
+}
+
+.login .senha{
+    margin-top: 20px;
+}
+
+                                            /* CADASTRO */
